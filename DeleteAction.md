@@ -14,15 +14,12 @@ The Delete Action in OmniStudio’s Integration Procedure allows you to efficien
 - **Add sObject to Delete:** Click on the Add sObject to Delete option. In the Type column, select the Salesforce object whose records you want to delete (e.g., Contact).
   ![image](https://github.com/user-attachments/assets/da370eca-6535-4239-91e8-5a08341d577a)
 
-
 ### 3. Specify the Path to Record IDs
 ![image](https://github.com/user-attachments/assets/da216f7f-09bd-47d8-96c0-80bffc97f2bd)
-
 - **Define the Path to Id:** In the Path to Id field, input the JSON path that corresponds to the record IDs you want to delete.
-
 For example, if your data JSON is structured like this:
 
-```json
+json:
 {
     "MyObj": {
         "ContactIds": [
@@ -32,3 +29,12 @@ For example, if your data JSON is structured like this:
     }
 }
 
+
+
+The **Path to Id** would be%MyObj:ContactIds%
+### 3. Execute the Integration Procedure
+![image](https://github.com/user-attachments/assets/672f7375-7537-40af-b3b0-80ad9714b5bd)
+- **Debugging: :** To test your Delete Action, go to the Debug Log Panel and select your Delete Action (for instance, DeleteAction1). This will execute the procedure and initiate the deletion process.
+- **Verify Deletion:** After execution, you can check the records to confirm that they have been successfully deleted from Salesforce.
+  
+By following these steps, you can effectively set up a Delete Action in OmniStudio’s Integration Procedure to manage your Salesforce records. This capability enhances your ability to maintain data integrity and streamline record management within your organization.
